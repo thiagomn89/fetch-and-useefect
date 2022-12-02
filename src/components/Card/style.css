@@ -1,0 +1,15 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.containerCard {
+    text-align: center;
+    color: blueviolet;
+    
+}
+
+img {
+    border: 4px solid blueviolet;
+    border-radius: 5px;
+}
