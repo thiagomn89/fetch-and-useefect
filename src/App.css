@@ -7,9 +7,33 @@
 .containerTitulo {
   display: flex;
   text-align: center;
-  justify-content: center;
-  padding: 15px;
+  padding: 5px;
 
+}
+
+.containerTitulo img {
+  width: 180px;
+
+}
+
+.containerTitulo button {
+  width: 100px;
+  height: 5vh;
+  text-align: center;
+  border-color: blueviolet;
+  border-radius: 50px;
+  color: blueviolet;
+  cursor: pointer;
+  
+
+}
+
+.containerTitulo button:hover {
+  color: rgb(76, 29, 119);
+}
+
+.coantainerButton {
+  padding-top: 50px;
 }
 
 body {

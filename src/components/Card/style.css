@@ -9,7 +9,8 @@
     
 }
 
-img {
+.containerCard img {
     border: 4px solid blueviolet;
     border-radius: 5px;
+   
 }

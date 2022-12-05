@@ -9,7 +9,8 @@ import rick from './img/rickimg.png';
 function App() {
   const [data, setData] = useState("");
   const [page, setPage] = useState(1);
-  console.log(data);
+  console.log(page);
+  
 
 useEffect(() => {
   fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
@@ -17,12 +18,12 @@ useEffect(() => {
     .then((response) => setData(response));
 }, [page]);
 
-  function handlePrev(){
+  function handlePrev() {
     setPage(page -1)
 
   }
 
-  function handleNext(){
+  function handleNext() {
     setPage(page +1)
 
   }
@@ -35,24 +36,19 @@ useEffect(() => {
             <div className='containerImg'>
               <img src={rick}/>
             </div>
-    
-          <button onClick={handlePrev}>Prev</button>
-            <button onClick={handleNext}>Next</button>
-            </div>
-         
-        
-          <div className="App">
-
-           
-        
-          {data.results.map((element) => (
-            <Card key={element.name} element=
+            <div className='containerButton'>
+             <button disabled={page < 1} onClick={handlePrev}>Prev</button>
+             <button disabled={page == data.info.pages} onClick={handleNext}>Next</button>
+             </div> 
+          </div>
+            <div className="App">
+            {data.results.map((element) => (
+            <Card key={element.id} element=
             {element}/>
                     
-          ))}
+            ))}
            </div>
-           </main>
-        
+        </main>
         </>
       ) : null
   

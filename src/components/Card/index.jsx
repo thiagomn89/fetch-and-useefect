@@ -1,7 +1,7 @@
  import './style.css';
  
  export function Card({ element }) {
-    console.log(element);
+    //console.log(element);
     return (
         <div className="containerCard">
             <p>{element.name}</p><br></br>
