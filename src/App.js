@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+
 import './App.css';
 import { useEffect, useState } from 'react';
 import {Card} from './components/Card';
@@ -37,9 +38,9 @@ useEffect(() => {
               <img src={rick}/>
             </div>
             <div className='containerButton'>
-             <button disabled={page < 1} onClick={handlePrev}>Prev</button>
-             <button disabled={page == data.info.pages} onClick={handleNext}>Next</button>
-             </div> 
+              <button disabled={page < 1} onClick={handlePrev}>Prev</button>
+              <button disabled={page == data.info.pages} onClick={handleNext}>Next</button>
+            </div> 
           </div>
             <div className="App">
             {data.results.map((element) => (
